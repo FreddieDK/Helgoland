@@ -44,7 +44,7 @@
           archive_file="$hostname-$day.tgz"
 
           # Where to backup to
-          mkdir="/mnt/backup/$hostname"
+          mkdir -p "/mnt/backup/$hostname"
           dest="/mnt/backup/$hostname"
 
           # Print start status message
