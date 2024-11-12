@@ -18,7 +18,7 @@
 
     - name: Mount NFS directory
       mount:
-        src: "192.168.0.25:/mnt/Storage/Backups"
+        src: "192.168.0.25:/mnt/Mainpool/Storage/Backups"
         path: /mnt/backup
         fstype: nfs
         opts: defaults
@@ -66,5 +66,5 @@
     - name: Add NFS mount to fstab
       lineinfile:
         path: /etc/fstab
-        line: "192.168.0.25:/mnt/Storage/Backups /mnt/backup nfs defaults 0 0"
+        line: "192.168.0.25:/mnt/Mainpool/Storage/Backups /mnt/backup nfs defaults 0 0"
         state: present
