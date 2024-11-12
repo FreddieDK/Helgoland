@@ -1,0 +1,7 @@
+- name: restart servers
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Restart servers
+      shell: "shutdown -r now"
